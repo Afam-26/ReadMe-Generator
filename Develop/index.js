@@ -1,5 +1,8 @@
 const inquirer = require ('inquirer');
+const util = require('util');
 const fs = require('fs');
+const writeAsync = util.promisify(fs.writeFile);
+
 
 let readMeTemplate = ({name, location, github}) => {
     return `Your ${name}
@@ -55,10 +58,12 @@ inquirer
 
         const template = readMeTemplate(answers);
 
-        fs.writeFile('README.md', template, (err) => {
-            if (err) throw err;
-            console.log('it worked!');
-        });
+        writeAsync('README.md', template);
+
+        // fs.writeFile('README.md', template, (err) => {
+        //     if (err) throw err;
+        //     console.log('it worked!');
+        // });
     })
     .catch(error => {
         console.log(error);
