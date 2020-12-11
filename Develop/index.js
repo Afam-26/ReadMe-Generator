@@ -1,5 +1,11 @@
 const inquirer = require ('inquirer');
-const fs = require('fs')
+const fs = require('fs');
+
+let readMeTemplate = ({name, location, github}) => {
+    return `Your ${name}
+    where are you from ${location} 
+    and your ${github}`;
+}
 
 // array of questions for user
 const questions = [
@@ -8,42 +14,64 @@ const questions = [
         name: 'name',
         message: 'What is your name?',
       },
+
       {
         type: 'input',
         name: 'location',
         message: 'Where are you from?',
       },
-         
+
+    //   {
+    //     type: 'input',
+    //     name: 'fileName',
+    //     message: "Enter the name of your README file, e.g. 'Project X README'",
+    //     filter: function (value) {
+    //     return formatFileName(value);
+    //     },
+    //   },
+
       {
         type: 'input',
         name: 'github',
         message: 'Enter your GitHub Username',
       },
+
       {
         type: 'input',
         name: 'linkedin',
         message: 'Enter your LinkedIn URL.',
+        default: "I don't have LinkedIn account" 
       },
+      
 
 ];
 
 inquirer
     .prompt(questions)
     .then(answers => {
-        console.log(answers);
+        // console.log(answers);
+
+        // const {name, location, github} = answers;
+
+        const template = readMeTemplate(answers);
+
+        fs.writeFile('README.md', template, (err) => {
+            if (err) throw err;
+            console.log('it worked!');
+        });
     })
+    .catch(error => {
+        console.log(error);
+    });
 
-// function to write README file
-// function writeToFile(fileName, data) {
-    
 
-// }
-// writeToFile(fileName, data);
 
-// fs.writeFile('readme.md', questions, (err) => {
-//     if (err) throw err;
-//     console.log('it worked')
-// })
+
+
+
+
+
+
 
 
 // function to initialize program
