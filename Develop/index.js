@@ -3,8 +3,9 @@ const util = require('util');
 const fs = require('fs');
 const writeAsync = util.promisify(fs.writeFile);
 
-
-let readMeTemplate = ({title, discription, installation, contributor, licence, github, email}) => {
+// Template function
+  
+let readMeTemplate = (title, discription, installation, contributor, licenseName, licenseUrl, licenseBadge, github, email) => {
     
   
   return `# Title
@@ -13,23 +14,21 @@ let readMeTemplate = ({title, discription, installation, contributor, licence, g
   \`\`\`  
     
 
-  ![Licence:${licence}](https://img.shields.io/badge/License-${licence}-blue.svg)  
+  [![License](${licenseBadge})](${licenseUrl})    
   
    
 
   # Discription   
 
-    ${discription}   
+  ${discription}   
     
 
   # Table of Contents  
 
     \n* [Installation](#installation)
-
+    \n* [Usage](#usage)
     \n* [Contributor](#contributor)
-    \n* [Licence](#licence)   
-    \n* [Github](#github)
-    \n* [Email](#email)
+    \n* [Licence](#licence)      
     \n* [Contacts](#contacts)
     \n* [Resources](#resources)
 
@@ -37,29 +36,24 @@ let readMeTemplate = ({title, discription, installation, contributor, licence, g
 
     ${installation}
 
+    ## Usage
+
+    ![video on how to use app]()
+
     ## Contributor
 
     ${contributor}
 
-    ## Lincence
+    ## Lincense
 
-    This Project licence is ${licence}
+    This Project is licensed by ${licenseName}
 
-    [Read more on Apache](https://opensource.org/licenses/Apache-2.0)
+    [Read more by clicking here!](${licenseUrl})
 
-    [Read more on MIT](https://opensource.org/licenses/MIT)
-
-    [Read more on GPL](https://opensource.org/licenses/gpl-3.0)
-
-    ## Github
-
-    ${github}
-
-    ## Email 
-
-    ${email}
-
+  
     ## Contacts 
+
+    Please reach out to me if you have any questions.
 
     Email: ${email}
 
@@ -105,60 +99,77 @@ const questions = [
 
       {
         type: 'list',
-        name: 'licence',
-        message: 'Licence name is MIT:',
+        name: 'license',
+        message: 'Please select license type',
         default: "MIT",
-        choices: ['MIT', 'GNUGPL', 'Apache.']
+        choices: ['MIT license', 'GNUGPL license', 'Apache license']
       },
       
       {
         type: 'input',
         name: 'github',
-        message: 'What is your github-username?'
+        message: 'What is your github-username?',
       },
 
       {
         type: 'input',
         name: 'email',
-        message: 'What is your email?'
+        message: "What's your email address?",
       }
 
 ];
+
+// Array for Licence
+
+const licenseTypes = [
+
+  {
+    name: 'MIT license',
+    url: 'https://choosealicense.com/licenses/mit/',
+    badge: 'https://img.shields.io/badge/license-MIT-green',
+  },
+
+  {
+    name: 'GNUGPL license',
+    url: 'https://opensource.org/licenses/gpl-3.0',
+    badge: 'https://img.shields.io/badge/license-GPL%20v%203.0-green',
+  },
+
+  {
+    name: 'Apache license',
+    url: 'https://opensource.org/licenses/Apache-2.0',
+    badge: 'https://img.shields.io/badge/license-Apache%202.0-green',
+  }
+
+]
 
 inquirer
     .prompt(questions)
     .then(answers => {
         // console.log(answers);
 
-        // const {name, location, github} = answers;
+        const {title, discription, installation, contributor, license,  github, email} = answers;             
 
-        const template = readMeTemplate(answers);
+              
+        if(license === "MIT license"){
+          licenseName = licenseTypes[0].name ;
+          licenseUrl = licenseTypes[0].url ;
+          licenseBadge = licenseTypes[0].badge;
+        } else if (license === "GNUGPL license"){
+          licenseName = licenseTypes[1].name ;
+          licenseUrl = licenseTypes[1].url ;
+          licenseBadge = licenseTypes[1].badge;
+        } else if(license === "Apache license"){
+          licenseName = licenseTypes[2].name ;
+          licenseUrl = licenseTypes[2].url ;
+          licenseBadge = licenseTypes[2].badge;
+        };
 
+        const template = readMeTemplate(title, discription, installation, contributor, licenseName, licenseUrl, licenseBadge, github, email);
         writeAsync('README.md', template);
-
-        // fs.writeFile('README.md', template, (err) => {
-        //     if (err) throw err;
-        //     console.log('it worked!');
-        // });
     })
     .catch(error => {
         console.log(error);
     });
 
 
-
-
-
-
-
-
-
-
-
-// function to initialize program
-// function init() {
-
-// }
-
-// function call to initialize program
-// init();
