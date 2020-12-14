@@ -1,22 +1,23 @@
 # Title
-    ```  
+  ```  
     ReadMe Generator 
-    ```
-
-    ![Licence:MIT](https://img.shields.io/badge/License-MIT-blue.svg)
-
-    # Discription
-
-
-
-    All you need to know about this 
-
+  ```  
     
 
-    # Table of Contents
+  ![Licence:MIT](https://img.shields.io/badge/License-MIT-blue.svg)  
+  
+   
+
+  # Discription   
+
+    What is expected of the app   
+    
+
+  # Table of Contents  
 
     
 * [Installation](#installation)
+
     
 * [Contributor](#contributor)
     
@@ -32,25 +33,25 @@
 
     ## Installation 
 
-    npm inquirer
+    npm i
 
     ## Contributor
 
-    none
+    one
 
     ## Lincence
 
-    This Project is MIT
+    This Project licence is MIT
 
-    [Read more...](https://opensource.org/licenses/Apache-2.0)
+    [Read more on Apache](https://opensource.org/licenses/Apache-2.0)
 
-    [Read more...](https://opensource.org/licenses/MIT)
+    [Read more on MIT](https://opensource.org/licenses/MIT)
 
-    [Read more...](https://opensource.org/licenses/gpl-3.0)
+    [Read more on GPL](https://opensource.org/licenses/gpl-3.0)
 
     ## Github
 
-    Afam262
+    afam262
 
     ## Email 
 
@@ -60,7 +61,7 @@
 
     Email: afam262@gmail.com
 
-    Github Username: Afam262
+    Github Username: afam262
 
     [Github link](https://afam-26.github.io/ReadMe-Generator/) 
 

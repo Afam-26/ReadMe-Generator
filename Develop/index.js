@@ -8,23 +8,24 @@ let readMeTemplate = ({title, discription, installation, contributor, licence, g
     
   
   return `# Title
-    \`\`\`  
+  \`\`\`  
     ${title} 
-    \`\`\`
-
-    ![Licence:${licence}](https://img.shields.io/badge/License-${licence}-blue.svg)
-
-    # Discription
-
-
-
-    ${discription}
-
+  \`\`\`  
     
 
-    # Table of Contents
+  ![Licence:${licence}](https://img.shields.io/badge/License-${licence}-blue.svg)  
+  
+   
+
+  # Discription   
+
+    ${discription}   
+    
+
+  # Table of Contents  
 
     \n* [Installation](#installation)
+
     \n* [Contributor](#contributor)
     \n* [Licence](#licence)   
     \n* [Github](#github)
@@ -42,13 +43,13 @@ let readMeTemplate = ({title, discription, installation, contributor, licence, g
 
     ## Lincence
 
-    This Project is ${licence}
+    This Project licence is ${licence}
 
-    [Read more...](https://opensource.org/licenses/Apache-2.0)
+    [Read more on Apache](https://opensource.org/licenses/Apache-2.0)
 
-    [Read more...](https://opensource.org/licenses/MIT)
+    [Read more on MIT](https://opensource.org/licenses/MIT)
 
-    [Read more...](https://opensource.org/licenses/gpl-3.0)
+    [Read more on GPL](https://opensource.org/licenses/gpl-3.0)
 
     ## Github
 
