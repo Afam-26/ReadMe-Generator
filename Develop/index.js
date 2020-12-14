@@ -38,7 +38,7 @@ let readMeTemplate = (title, discription, installation, contributor, licenseName
 
     ## Usage
 
-    ![video on how to use app]()
+    ![video on how to use app](./asset/screen.mp4)
 
     ## Contributor
 
