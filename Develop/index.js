@@ -14,38 +14,49 @@ let readMeTemplate = ({name, location, github}) => {
 const questions = [
     {
         type: 'input',
-        name: 'name',
-        message: 'What is your name?',
+        name: 'title', //name before
+        message: 'What is the title of project?',
       },
 
       {
         type: 'input',
-        name: 'location',
-        message: 'Where are you from?',
+        name: 'discription',
+        message: 'Please enter discription?',
       },
 
-    //   {
-    //     type: 'input',
-    //     name: 'fileName',
-    //     message: "Enter the name of your README file, e.g. 'Project X README'",
-    //     filter: function (value) {
-    //     return formatFileName(value);
-    //     },
-    //   },
+      {
+        type: 'input',
+        name: 'installation',
+        message: "Please enter in brief requirement for installation?'",
+        
+      },
 
+      {
+        type: 'list',
+        name: 'contirbutor',
+        message: 'Please enter if there are any contributors',
+        choices: ['one', 'two', 'none']
+      },
+
+      {
+        type: 'list',
+        name: 'Licence',
+        message: 'Licence name is MIT:',
+        default: "MIT",
+        choices: ['MIT', 'GNUGPL', 'Apache.']
+      },
+      
       {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username',
+        message: 'What is your github-username?'
       },
 
       {
         type: 'input',
-        name: 'linkedin',
-        message: 'Enter your LinkedIn URL.',
-        default: "I don't have LinkedIn account" 
-      },
-      
+        name: 'email',
+        message: 'What is your email?'
+      }
 
 ];
 
@@ -54,7 +65,7 @@ inquirer
     .then(answers => {
         // console.log(answers);
 
-        // const {name, location, github} = answers;
+        // const {name, location, github} Mu= answers;
 
         const template = readMeTemplate(answers);
 
