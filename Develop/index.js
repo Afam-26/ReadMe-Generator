@@ -90,14 +90,14 @@ const questions = [
 
       {
         type: 'input',
-        name: 'Installation',
-        message: 'Please enter in brief requirement for installation?',
+        name: 'installation',
+        message: 'Please enter brief requirement for installation?',
         
       },
 
       {
         type: 'list',
-        name: 'contirbutor',
+        name: 'contributor',
         message: 'Please enter if there are any contributors',
         choices: ['one', 'two', 'none']
       },

@@ -1,13 +1,17 @@
-
-    # Title
-
-    ```  ReadMe Generator ```
+# Title
+    ```  
+    ReadMe Generator 
+    ```
 
     ![Licence:MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
     # Discription
 
-    what to expect
+
+
+    All you need to know about this 
+
+    
 
     # Table of Contents
 
@@ -28,11 +32,11 @@
 
     ## Installation 
 
-    undefined
+    npm inquirer
 
     ## Contributor
 
-    undefined
+    none
 
     ## Lincence
 
@@ -55,7 +59,9 @@
     ## Contacts 
 
     Email: afam262@gmail.com
+
     Github Username: Afam262
+
     [Github link](https://afam-26.github.io/ReadMe-Generator/) 
 
     ## Programming-Language 
