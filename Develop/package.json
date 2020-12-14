@@ -6,8 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afam-26/ReadMe-Generator.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "git+https://github.com/Afam-26/ReadMe-Generator/issues"
+  },
+  "homepage": "https://github.com/Afam-26/ReadMe-Generator#readme",
   "dependencies": {
     "inquirer": "^6.5.2"
   }

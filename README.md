@@ -1,13 +1,13 @@
 
     # Title
 
-    ```  add ```
+    ```  ReadMe Generator ```
 
-    ![Licence: GNUGPL](https://img.shields.io/badge/License-GNUGPL-blue.svg)
+    ![Licence:MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
     # Discription
 
-    aaa
+    what to expect
 
     # Table of Contents
 
@@ -36,7 +36,7 @@
 
     ## Lincence
 
-    This Project is GNUGPL
+    This Project is MIT
 
     [Read more...](https://opensource.org/licenses/Apache-2.0)
 
@@ -46,16 +46,21 @@
 
     ## Github
 
-    sdd
+    Afam262
 
     ## Email 
 
-    sls
+    afam262@gmail.com
 
     ## Contacts 
 
-    Email: sls
-    Github Username: sdd
+    Email: afam262@gmail.com
+    Github Username: Afam262
     [Github link](https://afam-26.github.io/ReadMe-Generator/) 
+
+    ## Programming-Language 
+    ```
+    Java-Script
+    ```
     
     

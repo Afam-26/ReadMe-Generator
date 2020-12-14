@@ -5,16 +5,22 @@ const writeAsync = util.promisify(fs.writeFile);
 
 
 let readMeTemplate = ({title, discription, installation, contributor, licence, github, email}) => {
-    return `
-    # Title
+    
+  
+  return `# Title
+    \`\`\`  
+    ${title} 
+    \`\`\`
 
-    \`\`\`  ${title} \`\`\`
-
-    ![Licence: ${licence}](https://img.shields.io/badge/License-${licence}-blue.svg)
+    ![Licence:${licence}](https://img.shields.io/badge/License-${licence}-blue.svg)
 
     # Discription
 
+
+
     ${discription}
+
+    
 
     # Table of Contents
 
@@ -55,7 +61,9 @@ let readMeTemplate = ({title, discription, installation, contributor, licence, g
     ## Contacts 
 
     Email: ${email}
+
     Github Username: ${github}
+
     [Github link](https://afam-26.github.io/ReadMe-Generator/) 
 
     ## Programming-Language 
