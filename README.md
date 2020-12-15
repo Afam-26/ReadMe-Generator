@@ -1,6 +1,6 @@
 # Title
   ```  
-    ReadMe Generator 
+    ReadMe-Generator 
   ```  
     
 
@@ -10,7 +10,10 @@
 
   # Discription   
 
-  This is a command line application that assist developers with generating a high-quality README.    
+  This is command-line application that accept user input and create a high-quality, professional README.md
+
+ 
+  This will allow project creators to devote more time to working on the project.   
     
 
   # Table of Contents  
@@ -30,11 +33,18 @@
 
     ## Installation 
 
-    npm install
+    1. Clone the repo: https://github.com/Afam-26/ReadMe-Generator.git
+    2. Install NPM packages: npm install
+    3. npm i inquirer
 
     ## Usage
 
-    ![video on how to use app](./asset/screen.mp4)
+    When a user enter their project title, it will be displayed as the title of the README.
+    When a user enter a description, installation, contributions, etc; then, 
+    these information is added to the sections of the README assigned for it. 
+
+
+    ![video on how to use app](./asset/screen)
 
     ## Contributor
 
@@ -47,7 +57,7 @@
     [Read more by clicking here!](https://opensource.org/licenses/Apache-2.0)
 
   
-    ## Contacts 
+    ## Contacts Info
 
     Please reach out to me if you have any questions.
 
