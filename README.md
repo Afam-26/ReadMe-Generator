@@ -25,11 +25,11 @@
     
 * [Contributor](#contributor)
     
-* [Licence](#licence)      
+* [License](#license)      
     
 * [Contacts](#contacts)
     
-* [Resources](#resources)
+* [Programming-Language](#programming-language)
 
     ## Installation 
 

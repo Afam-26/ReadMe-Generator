@@ -30,9 +30,9 @@ let readMeTemplate = (title, discription, installation, contributor, licenseName
     \n* [Installation](#installation)
     \n* [Usage](#usage)
     \n* [Contributor](#contributor)
-    \n* [Licence](#licence)      
+    \n* [License](#license)      
     \n* [Contacts](#contacts)
-    \n* [Resources](#resources)
+    \n* [Programming-Language](#programming-language)
 
     ## Installation 
 
