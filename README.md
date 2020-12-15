@@ -45,7 +45,7 @@
     The application will be invoked by using the following command: node index.js
 
 
-    ![video on how to use app](./asset/screen)
+    ![video on how to use app](./asset/front.png)
 
     ## Contributor
 
