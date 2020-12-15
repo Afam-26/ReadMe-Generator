@@ -13,7 +13,7 @@
   This is command-line application that accept user input and create a high-quality, professional README.md
 
  
-  This will allow project creators to devote more time to working on the project.   
+  This will allow project creator to devote more time to working on the project.   
     
 
   # Table of Contents  
@@ -42,6 +42,7 @@
     When a user enter their project title, it will be displayed as the title of the README.
     When a user enter a description, installation, contributions, etc; then, 
     these information is added to the sections of the README assigned for it. 
+    The application will be invoked by using the following command: node index.js
 
 
     ![video on how to use app](./asset/screen)

@@ -21,7 +21,6 @@ let readMeTemplate = (title, discription, installation, contributor, licenseName
   # Discription   
 
   This is command-line application that accept user input and create a high-quality, professional README.md
-
  
   ${discription}   
     
@@ -49,7 +48,7 @@ let readMeTemplate = (title, discription, installation, contributor, licenseName
     The application will be invoked by using the following command: node index.js
 
 
-    ![video on how to use app](./asset/screen)
+    ![video on how to use app](./asset/front.png)
 
     ## Contributor
 
@@ -154,6 +153,7 @@ const licenseTypes = [
 
 ]
 
+// Inquirer module section
 inquirer
     .prompt(questions)
     .then(answers => {
